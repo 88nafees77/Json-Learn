@@ -15,8 +15,10 @@ public class MainClass {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws Exception {
-       File f= new File();
-       f.readFile();
+        File f = new File();
+        String read = "C:\\Users\\conta\\OneDrive\\Desktop\\details.txt";
+        String write = "C:\\Users\\conta\\OneDrive\\Desktop\\serial.txt";
+        f.readFile(read, write);
     }
-    
+
 }

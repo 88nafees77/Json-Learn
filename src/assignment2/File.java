@@ -17,15 +17,15 @@ import java.io.IOException;
 
 public class File {
 
-    public String[] readFile() throws Exception {
+    public String[] readFile(String read, String write) throws Exception {
         SerializationLine sl = new SerializationLine();
         JsonWriteString js = new JsonWriteString();
         FileSplitter splitter = new FileSplitter();
         DataAccessObject accessObject = null;
         BufferedReader reader;
         try {
-            reader = new BufferedReader(new FileReader(new java.io.File("C:\\Users\\conta\\OneDrive\\Desktop\\details.txt")));
-            BufferedWriter writer = new BufferedWriter(new FileWriter("C:\\Users\\conta\\OneDrive\\Desktop\\serial.txt"));
+            reader = new BufferedReader(new FileReader(new java.io.File(read)));
+            BufferedWriter writer = new BufferedWriter(new FileWriter(write));
             String line = reader.readLine();
             while (line != null) {
                 String[] lineRead = splitter.lineSplitter(line);
